@@ -2,7 +2,7 @@ const projects = [
   {
     title: 'HK Bus Live — Real-Time Bus ETA',
     summary: 'Responsive Hong Kong bus arrival web app focused on fast stop search, live ETA checks, favorites, search history, and a consistent bilingual experience across desktop and mobile.',
-    image: 'HKBusLive.svg',
+    image: 'HKBusLive.png',
     tags: ['Real-Time ETA', 'Hong Kong Transit', 'Bilingual UI', 'Responsive Web'],
     details: [
       'Designed a stop-first workflow that keeps the home screen clean until the user searches for a bus stop',
