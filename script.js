@@ -1,5 +1,19 @@
 const projects = [
   {
+    title: 'HK Bus Live — Real-Time Bus ETA',
+    summary: 'Responsive Hong Kong bus arrival web app focused on fast stop search, live ETA checks, favorites, search history, and a consistent bilingual experience across desktop and mobile.',
+    image: 'HKBusLive.svg',
+    tags: ['Real-Time ETA', 'Hong Kong Transit', 'Bilingual UI', 'Responsive Web'],
+    details: [
+      'Designed a stop-first workflow that keeps the home screen clean until the user searches for a bus stop',
+      'Added favorite-stop shortcuts with edit and removal controls for frequently used stops',
+      'Built searchable history management with individual selection, select-all, and clear actions',
+      'Created English and Traditional Chinese layouts that preserve consistent component sizing and dynamically adjust long stop names',
+      'Refined desktop and mobile layouts with an Apple-inspired visual system and responsive interaction patterns'
+    ],
+    links: [{label:'Code', url:'https://github.com/JarvisLam-LemonCEO/HKBusLive', icon:'fa-brands fa-github'}, {label:'Live Site', url:'https://hk-bus-live.vercel.app/', icon:'fa-solid fa-arrow-up-right-from-square'}]
+  },
+  {
     title: 'MarkItDown — Python 3.14 Edition',
     summary: 'Python 3.14-compatible modification of Microsoft MarkItDown with streamlined macOS and Windows installers, updated dependencies, and a globally available CLI.',
     image: 'MarkItDown.svg',
@@ -120,7 +134,7 @@ const projects = [
     links: [{label:'Code', url:'https://github.com/JarvisLam-LemonCEO/cmpe138car-rental', icon:'fa-brands fa-github'}]
   }
 ];
-const featuredConfig=[{index:0,theme:'cool',label:'Developer tooling · Python 3.14'},{index:3,theme:'dark',label:'AI media platform'},{index:4,theme:'cool',label:'Distributed AI infrastructure'},{index:5,theme:'warm',label:'Native iOS app'},{index:2,theme:'dark',label:'Developer learning platform'}];
+const featuredConfig=[{index:0,theme:'cool',label:'Real-time transit · Hong Kong'},{index:1,theme:'dark',label:'Developer tooling · Python 3.14'},{index:4,theme:'cool',label:'AI media platform'},{index:5,theme:'dark',label:'Distributed AI infrastructure'},{index:6,theme:'warm',label:'Native iOS app'}];
 const featuredIndexes=new Set(featuredConfig.map(x=>x.index));
 const featuredContainer=document.getElementById('featuredProjects'),projectGrid=document.getElementById('projectGrid'),modal=document.getElementById('projectModal'),modalClose=document.getElementById('modalClose'),modalMedia=document.getElementById('modalMedia');
 function renderFeatured(){featuredConfig.forEach(({index,theme,label})=>{const p=projects[index],primary=p.links[p.links.length-1]||p.links[0],el=document.createElement('article');el.className=`feature-project ${theme}`;el.innerHTML=`<div class="feature-copy reveal"><p class="kicker">${label}</p><h3>${p.title}</h3><p class="summary">${p.summary}</p><p class="feature-tags">${p.tags.join(' · ')}</p><div class="feature-actions"><button class="text-link" type="button" data-project="${index}">Learn more ›</button>${primary?`<a class="text-link" href="${primary.url}" target="_blank" rel="noopener">${primary.label} ↗</a>`:''}</div></div><div class="feature-media reveal">${p.image?`<img src="${p.image}" alt="${p.title} project interface" loading="lazy">`:`<div class="project-fallback">${p.title[0]}</div>`}</div>`;featuredContainer.appendChild(el)})}
