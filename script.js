@@ -137,8 +137,18 @@ const projects = [
       'Designed a professional boxing-ring presentation with arena lighting, ropes, corner posts, crowd depth, live-style HUD elements, and light/dark appearance support'
     ],
     links: []
+  },
+  {
+    title: 'Car Rental System',
+    summary: 'PHP and MySQL web system for rental workflows, built with XAMPP and team-based delivery.',
+    image: '',
+    fallbackIcon: 'fa-solid fa-car',
+    tags: ['PHP', 'MySQL', 'HTML'],
+    details: ['Built using HTML, PHP, MySQL, and XAMPP', 'Managed issues through consistent team communication'],
+    links: [{label:'Code', url:'https://github.com/JarvisLam-LemonCEO/cmpe138car-rental', icon:'fa-brands fa-github'}]
   }
 ];
+
 const featuredConfig=[{index:0,theme:'cool',label:'Real-time transit · Hong Kong'},{index:1,theme:'dark',label:'Developer tooling · Python 3.14'},{index:4,theme:'cool',label:'AI media platform'},{index:5,theme:'dark',label:'Distributed AI infrastructure'},{index:6,theme:'warm',label:'Native iOS app'}];
 const featuredIndexes=new Set(featuredConfig.map(x=>x.index));
 const featuredContainer=document.getElementById('featuredProjects'),projectGrid=document.getElementById('projectGrid'),modal=document.getElementById('projectModal'),modalClose=document.getElementById('modalClose'),modalMedia=document.getElementById('modalMedia');
