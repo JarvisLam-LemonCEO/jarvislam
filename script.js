@@ -125,6 +125,20 @@ const projects = [
     links: [{label:'Code', url:'https://github.com/JarvisLam-LemonCEO/CMPE272TeamProject', icon:'fa-brands fa-github'}, {label:'Demo', url:'https://youtu.be/K0GdGPxo6rg', icon:'fa-solid fa-play'}]
   },
   {
+    title: 'Face Fighter — Interactive Boxing Game',
+    summary: 'Responsive React boxing mini-game with custom opponent face uploads, touch-friendly face alignment, animated counter-punches, progressive facial damage effects, and separate classic and timed endurance modes.',
+    image: 'FaceFight.png',
+    tags: ['React', 'Tailwind CSS', 'Vite', 'Responsive Game UI', 'Touch Gestures'],
+    details: [
+      'Built a first-person boxing interface with keyboard, mouse, and mobile touch controls across desktop, laptop, tablet, and phone layouts',
+      'Created a browser-local opponent photo workflow with draggable face alignment, sliders, and two-finger pinch-to-zoom on mobile',
+      'Implemented progressive randomized bruise placement, eye swelling, nose bleeding, impact feedback, and animated opponent counter-punches',
+      'Added Classic Mode with health and KO rules plus a Time Limit endurance mode with custom round duration and continuous hit tracking',
+      'Designed a professional boxing-ring presentation with arena lighting, ropes, corner posts, crowd depth, live-style HUD elements, and light/dark appearance support'
+    ],
+    links: []
+  },
+  {
     title: 'Car Rental System',
     summary: 'PHP and MySQL web system for rental workflows, built with XAMPP and team-based delivery.',
     image: '',
@@ -134,7 +148,7 @@ const projects = [
     links: [{label:'Code', url:'https://github.com/JarvisLam-LemonCEO/cmpe138car-rental', icon:'fa-brands fa-github'}]
   }
 ];
-const featuredConfig=[{index:0,theme:'cool',label:'Real-time transit · Hong Kong'},{index:1,theme:'dark',label:'Developer tooling · Python 3.14'},{index:4,theme:'cool',label:'AI media platform'},{index:5,theme:'dark',label:'Distributed AI infrastructure'},{index:6,theme:'warm',label:'Native iOS app'}];
+const featuredConfig=[{index:15,theme:'dark',label:'Interactive game · React'},{index:0,theme:'cool',label:'Real-time transit · Hong Kong'},{index:1,theme:'dark',label:'Developer tooling · Python 3.14'},{index:4,theme:'cool',label:'AI media platform'},{index:5,theme:'dark',label:'Distributed AI infrastructure'},{index:6,theme:'warm',label:'Native iOS app'}];
 const featuredIndexes=new Set(featuredConfig.map(x=>x.index));
 const featuredContainer=document.getElementById('featuredProjects'),projectGrid=document.getElementById('projectGrid'),modal=document.getElementById('projectModal'),modalClose=document.getElementById('modalClose'),modalMedia=document.getElementById('modalMedia');
 function renderFeatured(){featuredConfig.forEach(({index,theme,label})=>{const p=projects[index],primary=p.links[p.links.length-1]||p.links[0],el=document.createElement('article');el.className=`feature-project ${theme}`;el.innerHTML=`<div class="feature-copy reveal"><p class="kicker">${label}</p><h3>${p.title}</h3><p class="summary">${p.summary}</p><p class="feature-tags">${p.tags.join(' · ')}</p><div class="feature-actions"><button class="text-link" type="button" data-project="${index}">Learn more ›</button>${primary?`<a class="text-link" href="${primary.url}" target="_blank" rel="noopener">${primary.label} ↗</a>`:''}</div></div><div class="feature-media reveal">${p.image?`<img src="${p.image}" alt="${p.title} project interface" loading="lazy">`:`<div class="project-fallback">${p.title[0]}</div>`}</div>`;featuredContainer.appendChild(el)})}
