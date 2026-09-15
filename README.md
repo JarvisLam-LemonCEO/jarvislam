@@ -35,3 +35,7 @@ Then visit `http://localhost:8000`.
 ## Project Assets
 
 Project screenshots and images are stored alongside the site files and referenced from `script.js`. Project metadata, descriptions, tags, and links are also maintained in `script.js`.
+
+## Portfolio layout update
+
+Face Fighter is displayed as the first project in **Selected Work**, directly before HK Bus Live. Project cards use a flow-based media layout so longer descriptions and tag lines cannot overlap their preview images on narrow or mobile viewports.

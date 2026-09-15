@@ -379,3 +379,46 @@ html[data-theme="dark"] .project-card:hover .project-card-media {
     border-radius: 13px;
   }
 }
+
+
+/* Project-card layout safety: keep media in document flow so longer copy never overlaps screenshots. */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+}
+
+.project-card-copy {
+  flex: 0 0 auto;
+  padding-bottom: 20px;
+}
+
+.project-card-media {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  flex: 0 0 auto;
+  width: auto;
+  height: 245px;
+  margin: auto 24px 24px;
+}
+
+@media (max-width: 720px) {
+  .project-card {
+    min-height: 0;
+  }
+
+  .project-card-copy {
+    padding-bottom: 22px;
+  }
+
+  .project-card-media {
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    height: clamp(210px, 54vw, 285px);
+    margin: 0 16px 16px;
+  }
+}
