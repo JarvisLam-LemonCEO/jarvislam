@@ -6,12 +6,15 @@ Personal portfolio website for Hei Lam (Jarvis), showcasing selected software en
 
 The portfolio currently highlights projects including:
 
-- **Face Fighter** — Responsive React boxing mini-game with custom face upload/alignment, desktop and mobile controls, progressive randomized visual damage effects, Classic Mode, and a configurable Time Limit endurance mode.
 - **HK Bus Live** — Real-time Hong Kong bus ETA web application.
 - **MarkItDown — Python 3.14 Edition** — Python 3.14-compatible modification and packaging workflow.
 - **PixelVault** — AI-powered media management platform.
 - **Lumina** — Distributed LLM split-inference system.
 - **SplitMate** — Native iOS expense-splitting application.
+
+## Additional Projects
+
+The broader project grid also includes **Face Fighter**, a responsive React boxing mini-game with custom face upload/alignment, desktop and mobile controls, randomized visual damage effects, Classic Mode, and a configurable Time Limit endurance mode.
 
 ## Technology
 
